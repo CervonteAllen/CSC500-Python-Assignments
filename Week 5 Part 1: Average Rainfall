@@ -1,0 +1,21 @@
+# Week 5 - Part 1: Average Rainfall
+def main():
+    print("Average Rainfall Calculator")
+    years = int(input("Enter number of years: "))
+    total_rain = 0
+    months = 0
+
+    for year in range(1, years + 1):
+        print(f"Year {year}:")
+        for month in range(1, 13):
+            rain = float(input(f"Enter inches of rainfall for month {month}: "))
+            total_rain += rain
+            months += 1
+
+    average = total_rain / months
+    print(f"Total months: {months}")
+    print(f"Total rainfall: {total_rain:.2f} inches")
+    print(f"Average rainfall per month: {average:.2f} inches")
+
+if __name__ == "__main__":
+    main()
